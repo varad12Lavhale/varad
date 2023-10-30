@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Indian Temple</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/97cd91180b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d395ac176f.js" crossorigin="anonymous"></script>
+
+
+</head>
+<style>
+    * {
+        /* margin: 0;
+      padding: 0; */
+        font-family: 'Montserrat', sans-serif;
+        /* user-select: none; */
+        color: white;
+        transition: 200ms ease-in-out;
+        /* overflow: hidden; */
+    }
+
+    /* Reset some default styles */
+    body,
+    h1,
+    h2,
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Set background color and font styles for the entire page */
+    body {
+        /* background-color: #f7e8d1; */
+        background-color: black;
+        font-family: Arial, sans-serif;
+        color: #333;
+    }
+
+
+
+    /* Set styles for the container */
+
+
+
+
+    .tagline {
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 30px;
+    }
+
+
+    /* Set styles for the gallery section */
+    /* Set styles for the location section */
+    #location {
+        padding: 40px 0;
+    }
+
+    #location h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    #location p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    /* Set styles for the branches section */
+    #branches {
+        padding: 40px 0;
+    }
+
+    #branches h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        
+    }
+
+    #branches p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    /* Set styles for the footer */
+    footer {
+        background-color: #ca9a64;
+        padding: 10px;
+
+        width: 100%;
+        text-align: center;
+    }
+
+    footer p {
+        color: #fff;
+        font-size: 14px;
+    }
+
+    #home {
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.636), rgba(0, 0, 0, 0.4)), url(images/temple_entrance.jpg);
+        /* opacity: 50%; */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        height: 78vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+        animation: changeBackground 6s infinite;
+        transition: 300ms ease-in-out;
+    }
+
+    #home:hover {
+
+        cursor: crosshair;
+        filter: sepia(70%);
+        transform: scale(1.05);
+
+    }
+
+    #home h1 {
+        font-size: 48px;
+        color: white;
+        opacity: 100%;
+        text-shadow: 0px 0px 40px white;
+
+        margin-bottom: 10px;
+    }
+
+    #home h1 span {
+
+        color: yellow;
+
+        text-shadow: 0px 0px 40px yellow;
+
+
+    }
+
+    .tagline {
+        text-shadow: 0px 0px 20px white;
+        animation-name: changeText;
+        animation-duration: 6s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+    }
+
+    #heroFoot {
+        background-color: #ffb700;
+        padding: 10px;
+
+        width: 100%;
+        text-align: center;
+    }
+
+    #heroFoot p::before {
+        content: "";
+        animation-name: changeDots;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        color: black;
+        animation-iteration-count: infinite;
+        text-shadow: 0px 0px 15px black;
+
+    }
+
+    .tagline::before {
+        content: "";
+        text-shadow: 0px 0px 20px white;
+        animation-name: changeText;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+
+    }
+
+
+    @keyframes changeText {
+
+        1%,
+        25% {
+            content: "A divine abode of spirituality";
+
+        }
+
+        25.01%,
+        50% {
+            content: "A heavenly Kshetra situated in sub hills of Sahyadri.";
+        }
+
+        50.01%,
+        75% {
+            content: "Experience the divinity and peace at Nemgiri";
+        }
+
+        75.01%,
+        100% {
+            content: "Spiritual journey starts the moment you start believing";
+        }
+    }
+</style>
+<style>
+    @keyframes changeDots {
+
+        1%,
+        25% {
+            content: "🟡";
+
+        }
+
+        25.01%,
+        50% {
+            content: "🟡🔴";
+        }
+
+        50.01%,
+        75% {
+            content: "🟡🔴🟡";
+        }
+
+        75.01%,
+        100% {
+            content: "🟡🔴🟡🔴";
+        }
+    }
+
+
+    @keyframes changeBackground {
+
+        1%,
+        25% {
+            opacity: 1;
+            background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.636), rgba(0, 0, 0, 0.4)), url(images/temple_entrance.jpg);
+
+        }
+
+        25.01%,
+        50% {
+            opacity: 1;
+            background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.636), rgba(0, 0, 0, 0.4)), url(images/hero_2.jpg);
+        }
+
+        50.01%,
+        75% {
+            opacity: 1;
+            background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.636), rgba(0, 0, 0, 0.4)), url(images/hero_3.jpg);
+        }
+
+        75.01%,
+        100% {
+            opacity: 1;
+            background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.636), rgba(0, 0, 0, 0.4)), url(images/hero_4.jpg);
+
+        }
+    }
+
+    /* Set styles for the header */
+    header {
+        background-image: linear-gradient(45deg, #ffb700, yellow);
+        padding: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 50px 0px 50px;
+    }
+
+    nav ul {
+        list-style-type: none;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        color: black;
+        text-decoration: none;
+        padding: 5px;
+    }
+
+    nav ul li a:hover {
+        color: white;
+        border-bottom: 1px solid white;
+        text-shadow: 0px 0px 16px white;
+    }
+
+    .socials {
+        background-color: transparent;
+        width: auto;
+        padding: 7px;
+        border: 2px solid black;
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+
+        text-decoration: none;
+    }
+
+    #socialIcon {
+        background-color: rgb(0, 0, 0);
+        width: 1.5rem;
+        height: 1.5rem;
+        text-align: center;
+        border: 10px;
+        border-radius: 10px;
+        /* display: flex; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        margin: 4px;
+    }
+
+    #socialIcon:hover {
+        transform: scale(1.2);
+        text-shadow: 0px 0px 15px black;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    section {
+        background-color: white;
+    }
+
+    #imageContent {
+        box-shadow: 10px 10px 1px yellow, 0px 0px 65px rgba(255, 213, 0, 0.436);
+        border-radius: 40px;
+        margin: 20px;
+        width: 70%;
+    }
+
+    #imageContent:hover {
+        transform: scale(1.03);
+        box-shadow: 10px 10px 1px red, 0px 0px 125px rgba(255, 0, 0, 0.658);
+    }
+
+    .container {
+        max-width: 40% !important;
+        margin: 0 auto;
+        padding: 20px;
+        padding: 25px !important;
+        max-width: 960px;
+        margin: 0 auto;
+        border-radius: 40px;
+        background-color: #1c1c1c;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+
+    }
+
+    label {
+        width: 100% !important;
+        text-align: center;
+        margin: 3px 0px 10px 0px;
+        color: white;
+        text-shadow: 0px 0px 15px white;
+        display: block;
+
+    }
+
+    #hrTop {
+        margin: 0;
+        border: 10px solid red;
+        box-shadow: 0px 0px 25px red;
+    }
+
+    /* Set styles for the about section */
+    #about {
+        padding: 40px 0;
+
+    }
+
+    #about h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: white !important;
+        text-shadow: 0px 0px 19px white;
+
+    }
+
+    #about p {
+        font-size: 18px;
+        margin-bottom: 10px;
+        width: 60%;
+    }
+
+    #galleryImage {
+        box-shadow: 10px 10px 1px white;
+        border-radius: 20px;
+        margin: 30px;
+        width: 40%;
+    }
+
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 850px) {
+        .column {
+            flex: 50%;
+            max-width: 50%;
+        }
+
+        #home {
+            width: 100vw;
+
+        }
+
+        #aboutContainer {
+            width: 100vh !important;
+            max-width: 100vh !important;
+            background-color: rgb(255, 0, 0) !important;
+            color: #1f1f;
+        }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+        .column {
+            flex: 100%;
+            max-width: 100% !important;
+        }
+    }
+
+    #gridImg {
+        width: 100%;
+    }
+
+    #gridImg:hover {
+        transform: scale(1.05);
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+        width: 100vh;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .rowContain {
+        height: 50vh;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        overflow: scroll;
+        flex-direction: column;
+        padding: 150px 0px 100px 0px;
+    }
+
+    #galleryContainer {
+        width: 100vh !important;
+        max-width: 100vh !important;
+        background-color: rgb(255, 183, 0);
+        color: #1f1f;
+
+    }
+
+    #aboutContainer {
+        width: 100vh !important;
+        max-width: 100vh !important;
+        background-color: rgb(32, 32, 32);
+        color: #1f1f;
+    }
+
+    #locationContainer {
+        width: 100vh !important;
+        max-width: 100vh !important;
+        background-color: rgb(32, 32, 32);
+        color: #1f1f;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        height: 100% !important;
+        align-content: center;
+        padding: 0 !important;
+        overflow: hidden;
+
+        box-shadow: 0px 0px 30px black;
+    }
+
+    #locationContainer:hover {
+        transform: scale(1.04);
+        box-shadow: 0px 0px 50px black;
+    }
+
+
+    #gallery {
+        padding: 40px 0;
+    }
+
+    #gallery h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: black;
+    }
+    #gallery p {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: black;
+    }
+
+    .txtContainer {
+        width: 80%;
+    }
+    .halfDiv {
+        width: 100%;
+        height: 100% !important;
+        padding: 18px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 55vh;
+        padding: 0;
+        margin: 0;
+    }
+    *::-webkit-scrollbar {
+        background-color: rgb(134, 98, 0);
+        border-radius: 100px;
+
+
+    }
+    *::-webkit-scrollbar-button {
+        background-color: rgb(255, 183, 0);
+        border-radius: 100px;
+    }
+    *::-webkit-scrollbar-corner {
+        background-color: rgb(255, 183, 0);
+        border-radius: 100px;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: rgb(255, 183, 0);
+        border-radius: 100px;
+    }
+
+    #homeBox {
+        background-color: red;
+    }
+</style>
+<style>
+    @media screen and (max-width: 850px) {
+  *{
+    background-color: red !important;
+  }
+}
+
+</style>
+<body>
+    <header>
+        <nav>
+            <h1 class="HeadLogo" style="text-shadow: 0px 0px 14px black;">🟡🔴</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#branches">Branches</a></li>
+            </ul>
+            <div class="socials">
+                <a href="https://www.facebook.com/your-page" target="_blank"><i class="fab fa-facebook-f"
+                        id="socialIcon"></i></a>
+                <a href="https://www.twitter.com/your-page" target="_blank"><i class="fab fa-twitter"
+                        id="socialIcon"></i></a>
+                <a href="https://www.instagram.com/your-page" target="_blank"><i class="fab fa-instagram"
+                        id="socialIcon"></i></a>
+                <a href="https://www.linkedin.com/company/your-page" target="_blank"><i class="fab fa-linkedin-in"
+                        id="socialIcon"></i></a>
+            </div>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="container" id="homeBox">
+            <h1>Welcome to <span>Nemgiri Temple</span></h1>
+            <p class="tagline"></p>
+        </div>
+    </section>
+    <section id="heroFoot">
+        <p></p>
+        </div>
+    </section>
+    <hr id="hrTop">
+    <section id="about">
+        <div class="container" id="aboutContainer">
+            <h2>About the Temple</h2>
+            <p id="aboutText">
+                This Kshetra is situated in sub hills of Sahyadri Mountains full of natural beauty in area of Marathvada
+                in Parabhani District 3 km away from Jintur. There are two hills named Nemgiri & Chandragiri are famous
+                in the world for their ancient artistic & miraculous Jain Cave Temples & Chaityalayas.
+            </p>
+            <img src="images/hills.jpeg" alt="Hills" id="imageContent">
+            <label id="imageDescription">Hills of Nemgiri</label>
+            <p id="aboutText">
+                In ancient times this area was famous as Jainpur, this was developed in the time of Emperor, Amogh
+                Varsha of Rashtrakut Family. Later in the middle period of Indian History, this was destroyed by
+                invaders, and its name was changed to Jintur, the current name. At that time 300 Jain families & 14 Jain
+                Temples were here. Today two temples out of them only are present.
+            </p>
+
+        </div>
+    </section>
+    <section id="gallery">
+        <div class="container" id="galleryContainer">
+            <h2>Gallery</h2>
+            <p>
+                Beauty of this place can't be described by the mere words. So here are the images to show this place's
+                beauty, that still doesen't do the justice to its Beauty.
+            </p>
+            <div class="rowContain">
+                <div class="row">
+                    <div class="column">
+                        <img src="images/chandragiri.jpeg" id="gridImg">
+                        <img src="images/statue1.jpeg" id="gridImg">
+                    </div>
+                    <div class="column">
+                        <img src="images/statue2.jpeg" id="gridImg">
+                        <img src="images/chandragiri2.jpeg" id="gridImg">
+                    </div>
+                    <div class="column">
+                        <img src="images/statue3.jpg" id="gridImg">
+                        <img src="images/statue4.jpg" id="gridImg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img src="images/chandragiri.jpeg" id="gridImg">
+                        <img src="images/statue1.jpeg" id="gridImg">
+                    </div>
+                    <div class="column">
+                        <img src="images/statue2.jpeg" id="gridImg">
+                        <img src="images/chandragiri2.jpeg" id="gridImg">
+                    </div>
+                    <div class="column">
+                        <img src="images/statue3.jpg" id="gridImg">
+                        <img src="images/statue4.jpg" id="gridImg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="location">
+        <div class="container" id="locationContainer">
+            <div class="halfDiv">
+
+                <div class="col-6">
+                    <h3>How to Reach:</h3>
+                    <div class="separator5"></div>
+                    <div class="reachContainer clearfix">
+                        <div class="iconContainer">
+                            <i class="fas fa-plane iconColor"></i>
+                        </div>
+                        <div class="txtContainer">
+                            <h4>By Air </h4>
+                            <p>Nearest Airport is Nanded, 110 Km away from Jintur.</p>
+                        </div>
+                    </div>
+                    <div class="reachContainer clearfix">
+                        <div class="iconContainer">
+                            <i class="fas fa-train iconColor2"></i>
+                        </div>
+                        <div class="txtContainer">
+                            <h4>By Train </h4>
+                            <p>Nearest Railway Station is Parbhani. Jintur is 40 km from Parbhani.</p>
+                        </div>
+                    </div>
+                    <div class="reachContainer clearfix">
+                        <div class="iconContainer">
+                            <i class="fas fa-bus iconColor3"></i>
+                        </div>
+                        <div class="txtContainer">
+                            <h4>By Road </h4>
+                            <p>Jintur is well connected to Jalna (40km) and Parbhani (40km) via State Highway connected
+                                from Nagpur to Aurangabad as well as on the state highway Nanded to Mumbai (Via
+                                Aurangabad).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.4408504629387!2d76.69717429611441!3d19.637410366329952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd06f7cc77dc833%3A0xc17d7ffffc27c1c6!2sNemgiri%20Digambar%20Jain%20Temple!5e0!3m2!1sen!2sin!4v1681666371563!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <section id="branches">
+        <div class="container">
+            <h2>Donation</h2>
+            <p>
+                
+                <h3>donate Some Fund for the Temple</h3> <br>               
+                <h3> Phonepay Number</h3><br>
+                <h3>7058557804</h3>
+            
+            </p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Indian Temple.Soham Kore @Github.</p>
+    </footer>
+</body>
+</html>
